@@ -1,0 +1,19 @@
+.step-heading {
+  @apply pb-5 text-cyan-900 text-[1.44rem] font-bold text-center leading-[1.35] md:text-[1.1rem];
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes appear {
+  from {
+    transform: translateX(100px);
+    opacity: 0.1;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.appear {
+  animation: appear 0.4s ease;
+}
