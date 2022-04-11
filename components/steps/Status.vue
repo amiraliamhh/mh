@@ -55,15 +55,15 @@ export default {
       items: [
         {
           title: 'Property secured, construction company needed',
-          image: '/images/baufi-22-01-01.png',
+          image: 'images/baufi-22-01-01.png',
         },
         {
           title: 'Property reserved or in transfer',
-          image: '/images/baufi-22-01-02.png',
+          image: 'images/baufi-22-01-02.png',
         },
         {
           title: 'Trying to understand my budget',
-          image: '/images/baufi-22-01-03.png',
+          image: 'images/baufi-22-01-03.png',
         },
       ],
     }

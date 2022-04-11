@@ -3,7 +3,7 @@
     <h2 class="step-heading !pb-[10px]">Where is/will be your property?</h2>
     <div class="w-full flex justify-center pt-[5px]">
       <img
-        src="/images/baufi-22-03-01.png"
+        src="images/baufi-22-03-01.png"
         alt="location"
         width="32"
         height="32"

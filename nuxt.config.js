@@ -42,7 +42,10 @@ export default {
       lang: 'en',
     },
   },
-
+  target: 'static',
+  router: {
+    base: '/mh/',
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: {
