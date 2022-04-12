@@ -45,44 +45,14 @@
             v-if="error"
             class="flex items-center antialiased py-[10px] text-[0.81rem] text-[#e46b7a]"
           >
-            <svg
-              class="mr-[5px]"
-              xmlns="http://www.w3.org/2000/svg"
-              width="14.44"
-              height="19.44"
-              fill="currentColor"
-              viewBox="0 0 256 256"
-            >
-              <rect width="256" height="256" fill="none"></rect>
-              <line
-                x1="200"
-                y1="56"
-                x2="56"
-                y2="200"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="24"
-              ></line>
-              <line
-                x1="200"
-                y1="200"
-                x2="56"
-                y2="56"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="24"
-              ></line>
-            </svg>
+            <Close />
             <span>Bitte geben Sie einen Ort an</span>
           </div>
         </label>
         <Submit
           class="pt-[15px]"
           :loading="loading"
+          :done="done"
           submit-text="Submit"
           @back="$emit('back')"
         />
@@ -94,10 +64,12 @@
 <script>
 import { storageMixin } from '@/mixins/storage'
 import Submit from '@/components/shared/Submit.vue'
+import Close from '@/assets/icons/close.svg?inline'
 
 export default {
   components: {
     Submit,
+    Close,
   },
   mixins: [storageMixin],
   emits: ['next'],
@@ -107,6 +79,7 @@ export default {
       postalCode: '',
       error: false,
       loading: false,
+      done: false,
     }
   },
   methods: {
@@ -121,6 +94,9 @@ export default {
       if (!this.error) {
         this.loading = true
         await this.sleep()
+        this.loading = false
+        this.done = true
+        await this.sleep(200)
         this.setItem('postalCode', this.postalCode)
         this.loading = false
         this.$emit('next')

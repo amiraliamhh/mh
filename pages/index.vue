@@ -39,7 +39,7 @@ export default {
   },
   data() {
     return {
-      activeStep: 1,
+      activeStep: 3,
     }
   },
   mounted() {
