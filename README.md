@@ -24,7 +24,9 @@ Then navigate to [http://localhost:3000/mh/](http://localhost:3000/mh/).
 
 ## Third party libraries used in this project
 
-Other than 3rd party libs that are dependencies of `nuxt.js`, only TailwindCSS has been added to the project.
+Other than 3rd party libs that are dependencies of `nuxt.js`, TailwindCSS and @nuxtjs/svg have been added to the project.
+
+### TailwindCSS
 
 **some** of the TailwindCSS pros and cons:
 
@@ -38,3 +40,7 @@ Cons:
 1. It makes the HTML hard-to-read and maintain. Sometimes managing all of the class names given to an element becomes an issue.
 
 Given that in my opinion, the main trade-off is between _maintainability_ vs. _fast development_, and this is a test project, I decided to go with fast development.
+
+### @nuxtjs/svg
+
+Only for importing SVGs as inline imports.
