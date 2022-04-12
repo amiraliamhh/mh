@@ -11,7 +11,11 @@
       />
     </div>
     <div class="w-full flex flex-col items-center">
-      <form class="pt-[15px] w-full sm:w-[400px]" @submit.prevent="next">
+      <form
+        class="pt-[15px] w-full sm:w-[400px]"
+        novalidate
+        @submit.prevent="next"
+      >
         <label
           :class="[
             'relative block',
@@ -32,6 +36,8 @@
             v-model="postalCode"
             type="text"
             class="h-14 pt-5 w-full border-2 border-[#bbbbbb] rounded-[3px] px-[0.675rem] focus:bg-[#f5f7fa] outline-none font-semibold text-cyan-900"
+            autocomplete="off"
+            required
             @input="validate"
             @focus="focused = true"
             @blur="
