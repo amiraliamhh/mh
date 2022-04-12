@@ -47,7 +47,7 @@
               </span>
             </div>
             <span
-              class="absolute font-bold leading-[0.75] top-9 text-[0.81rem] px-[0.8rem] py-[0.7rem] h-8 text-white bg-[#5a5a5a] antialiased rounded-[3px]"
+              class="absolute font-bold leading-[0.75] top-9 text-[0.81rem] sm:text-[0.9rem] px-[0.8rem] py-[0.7rem] h-8 text-white bg-[#5a5a5a] antialiased rounded-[3px]"
               :style="{
                 left: `${rate * 10}%`,
                 transform: `translateX(-${rate * 10}%)`,
