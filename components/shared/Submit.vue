@@ -18,27 +18,25 @@
       ]"
     >
       <div class="flex items-center">
-        <Done v-if="done" />
-        <Loading v-else-if="loading" />
+        <Done v-if="done" class="mr-3" />
+        <Loading v-else-if="loading" class="mr-3" />
         <span class="text-[0.9rem] md:text-base antialiased font-semibold">
           {{ submitText }}
         </span>
       </div>
-      <ArrowRight />
+      <ArrowLeft class="rotate-180" />
     </button>
   </div>
 </template>
 
 <script>
 import Loading from '@/assets/icons/loading.svg?inline'
-import ArrowRight from '@/assets/icons/arrow-right.svg?inline'
 import ArrowLeft from '@/assets/icons/arrow-left.svg?inline'
 import Done from '@/assets/icons/done.svg?inline'
 
 export default {
   components: {
     Loading,
-    ArrowRight,
     ArrowLeft,
     Done,
   },

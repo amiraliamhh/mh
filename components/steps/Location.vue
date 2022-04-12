@@ -45,7 +45,7 @@
             v-if="error"
             class="flex items-center antialiased py-[10px] text-[0.81rem] text-[#e46b7a]"
           >
-            <Close />
+            <Close class="mr-[5px]" />
             <span>Bitte geben Sie einen Ort an</span>
           </div>
         </label>
